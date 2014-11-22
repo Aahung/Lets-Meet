@@ -1,8 +1,4 @@
-
-
 # Lets Meet #
-
-
 
 ## Abstract ##
 
@@ -15,19 +11,21 @@ Lets Meet will be open sourced on Github :-)
 ## What does it do? ##
 
 - Admin can create a meet, invite people to join the meet
+  - multiple admins is allowed
 - One can create meet options, and only he or she can edit
+  1. option brief intro
+  2. option pros
+  3. option cons
 - anyone can comment on an option and persuade option owner to make changes
+  - comment system
 - each member ticks the available days and preferred options
+- an overall report will shows
+  1. most popular option 
+  2. and its best time
 
-
-
-## Parts ##
-
-
+## Project Parts ##
 
 ### Server side ###
-
-
 
 #### Database to store the ####
 
