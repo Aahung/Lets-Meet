@@ -73,6 +73,10 @@ Lets Meet will be open sourced on Github :-)
   - User_Id
   - Rate
 
+- Version [Table]
+  
+  for update
+  - Version
 
 ### Client Side ###
 #### Web App

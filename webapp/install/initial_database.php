@@ -1,4 +1,5 @@
 <?php 
+$build_version = 1;
 function initial_database(
     $host, $database, $user, $pass) {
     // initial database connection
@@ -72,6 +73,12 @@ function initial_database(
         `User_Id` INT unsigned NOT NULL,
         `Rate` TINYINT unsigned NOT NULL default 0,
         INDEX (`Option_Id`)
+        ) ENGINE=MyISAM  DEFAULT CHARSET=utf8";
+    $result = $conn -> query($sql);
+
+    // Version Table
+    $sql = "CREATE TABLE IF NOT EXISTS `Version` (
+        `Version` INT unsigned NOT NULL default " . $build_version . ",
         ) ENGINE=MyISAM  DEFAULT CHARSET=utf8";
     $result = $conn -> query($sql);
 }
