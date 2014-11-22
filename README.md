@@ -11,7 +11,7 @@ Lets Meet will be open sourced on Github :-)
 ## What does it do? ##
 
 - Admin can create a meet, invite people to join the meet
-  - multiple admins is allowed
+  - multiple admins is allowed (low priority)
 - One can create meet options, and only he or she can edit
   1. option brief intro
   2. option pros
@@ -36,16 +36,13 @@ Lets Meet will be open sourced on Github :-)
   - Brief
   - User_Id
 
-
-
 - Option [Table] 
   - Option_Id
+  - Meet_Id
   - Brie
   - Pros
   - Cons
   - User_Id
-
-
 
 - User [Table]
   - User_Id
@@ -56,30 +53,20 @@ Lets Meet will be open sourced on Github :-)
 
 
 - Comment [Table]
+  - Comment_Id
   - Option_Id
   - User_Id
   - Content
   - Time
 
-
-
-- Meet_Option_Junction [Table]
-  - Meet_Id 
-  - Option_Id 
-
-
-
 - Meet_User_Junction [Table]
   - Meet_Id
   - User_Id
 
-
 - Availibility [Table]
   - Meet_Id
   - User_Id
-  - Available_Day
-
-
+  - Available_Days
 
 - Preference [Table]
   - Option_Id
