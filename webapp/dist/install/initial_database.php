@@ -13,6 +13,7 @@ function initial_database(
         `Meet_Id` INT unsigned NOT NULL auto_increment,
         `Biref` varchar(1000) NOT NULL default '',
         `User_Id` INT unsigned NOT NULL,
+        `Time` INT NOT NULL,
         PRIMARY KEY (`Meet_Id`)
         ) ENGINE=MyISAM  DEFAULT CHARSET=utf8";
     $result = $conn -> query($sql);
@@ -21,11 +22,20 @@ function initial_database(
     $sql = "CREATE TABLE IF NOT EXISTS `Option` (
         `Option_Id` INT unsigned NOT NULL auto_increment,
         `Meet_Id` INT unsigned NOT NULL,
+        `User_Id` INT unsigned NOT NULL,
+        PRIMARY KEY (`Option_Id`)
+        ) ENGINE=MyISAM  DEFAULT CHARSET=utf8";
+    $result = $conn -> query($sql);
+
+    // Option_Snapshot Table
+    $sql = "CREATE TABLE IF NOT EXISTS `Option_Snapshot` (
+        `Snapshot_Id` INT unsigned NOT NULL auto_increment,
+        `Option_Id` INT unsigned NOT NULL,
         `Biref` varchar(1000) NOT NULL default '',
         `Pros` varchar(1000) NOT NULL default '[]',
         `Cons` varchar(1000) NOT NULL default '[]',
-        `User_Id` INT unsigned NOT NULL,
-        PRIMARY KEY (`Option_Id`)
+        `Time` INT NOT NULL,
+        PRIMARY KEY (`Snapshot_Id`)
         ) ENGINE=MyISAM  DEFAULT CHARSET=utf8";
     $result = $conn -> query($sql);
 
@@ -36,6 +46,7 @@ function initial_database(
         `Facebook` varchar(50),
         `QQ` varchar(20),
         `Email` varchar(50),
+        `Password` varchar(40),
         PRIMARY KEY (`User_Id`)
         ) ENGINE=MyISAM  DEFAULT CHARSET=utf8";
     $result = $conn -> query($sql);
