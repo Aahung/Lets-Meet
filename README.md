@@ -35,14 +35,20 @@ Lets Meet will be open sourced on Github :-)
   - Meet_Id
   - Brief
   - User_Id
+  - Time
 
 - Option [Table] 
   - Option_Id
   - Meet_Id
-  - Brie
+  - User_Id
+
+- Option_Snapshot [Table]
+  - Snapshot_Id
+  - Option_Id
+  - Brief
   - Pros
   - Cons
-  - User_Id
+  - Time
 
 - User [Table]
   - User_Id
@@ -50,6 +56,7 @@ Lets Meet will be open sourced on Github :-)
   - Facebook
   - QQ
   - Email
+  - Password (double md5)
 
 
 - Comment [Table]
@@ -73,6 +80,10 @@ Lets Meet will be open sourced on Github :-)
   - User_Id
   - Rate
 
+- Version [Table]
+  
+  for update
+  - Version
 
 ### Client Side ###
 #### Web App
