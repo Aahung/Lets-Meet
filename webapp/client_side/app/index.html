@@ -23,9 +23,9 @@
     <!-- Add your site or application content here -->
     <div class="container">
       <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/login">Log in</a></li>
+        <ul class="nav nav-pills pull-right" ng-controller="LoginbtnCtrl">
+          <li class="active"><a ng-href="#/">Home</a></li>
+          <li><a ng-href="#/login">{{loginBtn}}</a></li>
         </ul>
         <h3 class="text-muted">letsMeet</h3>
       </div>
@@ -77,6 +77,8 @@
         <script src="scripts/services/meet.js"></script>
         <script src="scripts/services/user.js"></script>
         <script src="scripts/services/option.js"></script>
+        <script src="scripts/controllers/user.js"></script>
+        <script src="scripts/controllers/loginbtn.js"></script>
         <!-- endbuild -->
 </body>
 </html>
