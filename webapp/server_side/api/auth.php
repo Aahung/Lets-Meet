@@ -21,7 +21,17 @@ if (!isset($username)) {
 if ($method == 'email' && isset($password)) {
     $user = new User();
     if ($user->authenticate($username, $password)) {
-        echo $user->get_alias();
+        header('Content-Type: application/json');
+        $obj = array();
+        $obj['success'] = 1;
+        $obj['alias'] = $user->get_alias();
+        $obj['id'] = $user->get_user_id();
+        echo json_encode($obj);
+    } else {
+        header('Content-Type: application/json');
+        $obj = array();
+        $obj['success'] = 0;
+        echo json_encode($obj);
     }
 } 
 ?>
